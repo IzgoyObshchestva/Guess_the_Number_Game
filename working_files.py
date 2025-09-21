@@ -14,7 +14,7 @@ def ww(code: bool):
     while True:
         all_file_name = get_all_file_words()
         if all_file_name:
-            zxc = f'выберите файл:\n1) назад\n{'\n'.join([f'{index+2}) {name}' for index, name in enumerate(all_file_name)])}'
+            zxc = f"выберите файл:\n1) назад\n{'\n'.join([f'{index+2}) {name}' for index, name in enumerate(all_file_name)])}"
             qwe = action_selection(tuple(range(1, len(all_file_name)+2)), zxc)
             if qwe == 1:
                 clear_console()
