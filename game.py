@@ -23,12 +23,6 @@ def start_of_the_round(file_name: str):
         i = 1
         while i <= asd[1]:
             qwe = input(f'Попытка {i}: ').lower()
-            
-            if len(qwe) != len(asd[0]):
-                print(f'⚠️  Ваше слово должно быть из {len(asd[0])} букв')
-                continue
-            else:
-                i+=1
 
             if qwe == asd[0]:
                 print('🎰 Ты угадал')
@@ -45,8 +39,14 @@ def start_of_the_round(file_name: str):
                 qqq = True
                 break
             else:
+                if len(qwe) != len(asd[0]):
+                    print(f'⚠️  Ваше слово должно быть из {len(asd[0])} букв')
+                    continue
+                else:
+                    i+=1
                 print(word_check(qwe, asd[0]))
-                
+            
+            
             
         else:
             print(f'💀 Сори ты просрал, слово было: {asd[0]}')
